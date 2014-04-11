@@ -1,0 +1,37 @@
+<html>
+<head><script language="Javascript" src="http://www.codehelper.io/api/ips/?js"></script>
+<script language="Javascript">
+function preloadFunc()
+{
+var ip = codehelper_ip.IP;
+var bannedips=[
+ "127.0.0.1", 
+]
+var handleips=bannedips.join("|")
+handleips=new RegExp(handleips, "i")
+
+if (ip.search(handleips)=-1){ 
+window.location.replace("index.html");
+document.write('<!--');
+}
+}
+window.onpaint = preloadFunc();
+</script></head>
+<body>
+
+    <form action='process.php' method='GET' id="newpost">
+        Title: <input type='text' name='title'/>
+        <br/>
+        Date: <input type='date' name='date'/>
+        <br/>
+		Image(use full path and if the image is on the web include the http:// prefix) : <input type='text' name='img'/>
+        <br/>
+		
+		comment : <textarea name='comment' form="newpost"></textarea>
+        <br/>
+        <input type='submit' value='SUBMIT'/>
+    </form>
+	
+	<iframe src="testFile.html">
+</body>
+</html>
